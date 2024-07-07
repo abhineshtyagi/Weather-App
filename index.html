@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+
+        <link rel="stylesheet" href="weatherApp.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrapper">
+                    <!-- Top Level Container -->
+            <div class="container">
+                        <!-- Top most Heading -->
+                <h1>
+                    Weather App
+                </h1>
+
+                        <!-- Search and your location section -->
+                <div class="tab-container">
+                    <div class="tab" data-userWeather>
+                        Your Weather
+                    </div>
+                    
+                    <div class="tab" data-searchWeather>
+                        Search Weather
+                    </div>
+                </div>
+
+                        <!-- Weather Container -->
+                <div class="weather-container">
+                            <!-- Grant Location Access -->
+                    <div class="sub-container grant-location-container">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/location.png" 
+                        width="80" height="80" loading="lazy"/>
+
+                        <h2>
+                            Grant Location Access
+                        </h2>
+
+                        <h3>
+                            Allow Access To Get Weather Information
+                        </h3>
+
+                        <button class="btn" data-grantAccess>
+                            Grant Access
+                        </button>
+                    </div>
+
+                        <!-- Search Form -->
+                    <form class="form-container" data-searchForm >
+                        <input type="text" id="search" placeholder="Search for city..." data-searchInput/>
+
+                        <button type="submit" class="btn">
+                            <img src="https://codehelp-weather-app.netlify.app/assets/search.png" 
+                            width="20" height="20" loading="lazy"/>
+                        </button>
+                    </form>
+
+                            <!-- Loading pic -->
+                    <div class="sub-container loading-container">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/loading.gif" 
+                        width="150" height="150" loading="lazy"/>
+
+                        <div>Loading</div>
+                    </div>
+
+                            <!-- Error 404 section -->
+                    <div class="sub-container error-container">
+                        <img src="https://codehelp-weather-app.netlify.app/assets/not-found.png" 
+                        width="300" height="300"/>
+
+                        <div>City Not Found</div>
+                    </div>
+
+                            <!-- Weather Information -->
+                    <div class="sub-container user-info-container">
+                            <!-- City Name with Country flag -->
+                        <div class="name">
+                            <div data-cityName></div>
+
+                            <img data-countryIcon/>
+                        </div>
+
+                            <!-- Description -->
+                        <p data-weatherDesc></p>
+
+                            <!-- Image of clouds etc. -->
+                        <img data-weatherIcon class="haze"/>
+
+                            <!-- Temperature -->
+                        <p data-temp></p>
+
+                            <!-- Lower section for wind Speed etc. -->
+                        <div class="parameter-container">
+                                <!-- WindSpeed -->
+                            <div class="parameter">
+                                <img src="https://codehelp-weather-app.netlify.app/assets/wind.png" 
+                                loading="lazy"/>
+
+                                <p>WindSpeed</p>
+
+                                <div data-windSpeed></div>
+                            </div>
+
+                                <!-- Humidity -->
+                            <div class="parameter">
+                                <img src="https://codehelp-weather-app.netlify.app/assets/humidity.png" 
+                                loading="lazy"/>
+
+                                <p>Humidity</p>
+
+                                <div data-humidity></div>
+                            </div>
+
+                                <!-- Clouds -->
+                            <div class="parameter">
+                                <img src="https://codehelp-weather-app.netlify.app/assets/cloud.png" 
+                                />
+
+                                <p>Clouds</p>
+
+                                <div data-clouds></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="weatherApp.js"></script>
+        
+    </body>
+</html>
